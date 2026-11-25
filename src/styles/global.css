@@ -35,7 +35,7 @@ h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); margin-top: 2.5rem; }
 .pristabell td { padding: .7rem .5rem; border-bottom: 1px solid var(--kant); vertical-align: top; }
 .pristabell td:last-child { text-align: right; font-weight: 700; white-space: nowrap; }
 .pristabell small { color: #666; }
-.galleri { display: grid; gap: .75rem; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.galleri { display: grid; gap: .75rem; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
 .galleri img { aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; width: 100%; }
 .mangler { background: #fff3c4; padding: 0 .3rem; border-radius: 3px; }
 form.skjema { display: grid; gap: 1rem; max-width: 36rem; }
