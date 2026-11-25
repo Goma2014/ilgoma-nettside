@@ -1,0 +1,32 @@
+{
+  "ingress": "Gomahuset leies ut til selskap og sosiale samlinger. Nyoppusset og klart til fest, midt i Kristiansund.",
+  "kapasitet": "Bordplass til 50–60 gjester",
+  "fasiliteter": [
+    "Komplett, fungerende kjøkken",
+    "Konferanserom med presentasjonsutstyr",
+    "Egne parkeringsplasser",
+    "Nyoppussede toaletter og gang"
+  ],
+  "tilgjengelighet": "Ved helgeleie disponerer du lokalet fra fredag til søndag kveld, så du har god tid til forberedelser og opprydding.",
+  "priser": [
+    {
+      "navn": "Hel helg (fredag til søndag kveld), vask inkludert",
+      "pris": "6 000 kr"
+    },
+    {
+      "navn": "Depositum",
+      "pris": "MÅ FYLLES INN"
+    }
+  ],
+  "betaling": "Vipps #550723",
+  "kontaktTelefon": "911 97 135",
+  "kontaktEpost": "heia@ilgoma.no",
+  "googleKalenderId": "",
+  "leieavtalePdf": "",
+  "bilder": [
+    "/bilder/gomahuset.jpg",
+    "/bilder/klubbhus.jpg",
+    "/bilder/2025-senior-1.jpg",
+    "/bilder/2025-senior-2.jpg"
+  ]
+}

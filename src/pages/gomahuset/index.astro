@@ -1,0 +1,93 @@
+---
+import Base from '../../layouts/Base.astro';
+import u from '../../data/utleie.json';
+import Tekst from '../../components/Tekst.astro';
+const mangler = (t: string) => t.includes('MÅ FYLLES INN');
+const kalenderUrl = u.googleKalenderId
+  ? `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(u.googleKalenderId)}&ctz=Europe%2FOslo&mode=MONTH&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&hl=no`
+  : '';
+---
+<Base tittel="Leie Gomahuset" beskrivelse="Lei Gomahuset i Kristiansund sentrum. Plass til 50–60 gjester, komplett kjøkken. Se ledige datoer og send forespørsel.">
+  <section class="hero">
+    <div class="wrap">
+      <h1>Leie Gomahuset</h1>
+      <p class="ingress">{u.ingress}</p>
+      <p><a class="knapp" href="#forespørsel">Send forespørsel</a></p>
+    </div>
+  </section>
+
+  <section class="seksjon">
+    <div class="wrap to-kol">
+      <div>
+        <h2 style="margin-top:0">Perfekt til bryllup, bursdag og konfirmasjon</h2>
+        <p>Gomafolk er kjent for å holde gode fester! {u.kapasitet}.</p>
+        <ul>{u.fasiliteter.map((f) => <li>{f}</li>)}</ul>
+        <p>{u.tilgjengelighet} Vask etter leieforholdet er inkludert i prisen.</p>
+      </div>
+      <div class="galleri">{u.bilder.map((b) => <img src={b} alt="Gomahuset" loading="lazy" />)}</div>
+    </div>
+  </section>
+
+  <section class="seksjon grå" id="kalender">
+    <div class="wrap">
+      <h2 style="margin-top:0">Ledige datoer</h2>
+      <p>Datoer markert i kalenderen er opptatt. Alle andre helger er ledige.</p>
+      {kalenderUrl
+        ? <iframe src={kalenderUrl} title="Kalender for Gomahuset" class="kalender" loading="lazy"></iframe>
+        : <p class="mangler">Kalenderen kobles til når klubbens Google-kalender er satt opp.</p>}
+    </div>
+  </section>
+
+  <section class="seksjon">
+    <div class="wrap to-kol">
+      <div>
+        <h2 style="margin-top:0">Priser</h2>
+        <table class="pristabell"><tbody>
+          {u.priser.map((p) => <tr><td>{p.navn}</td><td class={mangler(p.pris) ? 'mangler' : ''}>{p.pris}</td></tr>)}
+        </tbody></table>
+        <p>Betaling: {u.betaling}</p>
+      </div>
+      <div>
+        <h2 style="margin-top:0">Leieavtale</h2>
+        <p>Leietaker må være minst 30 år og signere leieavtalen. Avtalen inneholder også ordensreglene, blant annet at uteområdet skal ryddes samme kveld før man forlater lokalet.</p>
+        <p><a class="knapp" href="/gomahuset/leieavtale">Les og skriv ut leieavtalen</a></p>
+        <p>Spørsmål? Ring <a href={`tel:${u.kontaktTelefon.replace(/\s/g, '')}`}>{u.kontaktTelefon}</a> eller send e-post til <a href={`mailto:${u.kontaktEpost}`}>{u.kontaktEpost}</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seksjon grå" id="lokalet">
+    <div class="wrap"><Tekst side="lokalet" visTittel /></div>
+  </section>
+
+  <section class="seksjon" id="forespørsel">
+    <div class="wrap">
+      <h2 style="margin-top:0">Send forespørsel</h2>
+      <p>Sjekk kalenderen først. Vi svarer så raskt vi kan, og bookingen er bekreftet når du har fått svar fra oss.</p>
+      <form class="skjema" name="leie-gomahuset" method="POST" action="/takk" data-netlify="true" netlify-honeypot="bot-felt">
+        <input type="hidden" name="form-name" value="leie-gomahuset" />
+        <p hidden><label>Ikke fyll ut: <input name="bot-felt" /></label></p>
+        <label>Navn <input name="navn" required autocomplete="name" /></label>
+        <label>E-post <input type="email" name="epost" required autocomplete="email" /></label>
+        <label>Telefon <input type="tel" name="telefon" required autocomplete="tel" /></label>
+        <label>Ønsket helg (fredagens dato) <input type="date" name="dato" required /></label>
+        <label>Type arrangement
+          <select name="arrangement">
+            <option>Bursdag</option><option>Konfirmasjon</option><option>Bryllup</option><option>Minnesamvær</option><option>Møte eller kurs</option><option>Annet</option>
+          </select>
+        </label>
+        <label>Antall gjester <input type="number" name="gjester" min="1" max="60" /></label>
+        <label>Melding <textarea name="melding" rows="4"></textarea></label>
+        <label class="avkryss"><input type="checkbox" name="over-30" required /> Jeg er over 30 år og blir ansvarlig leietaker.</label>
+        <label class="avkryss"><input type="checkbox" name="leieavtale" required /> Jeg har lest <a href="/gomahuset/leieavtale">leieavtalen og ordensreglene</a>.</label>
+        <p><small>Vi bruker opplysningene bare til å svare på forespørselen. Se <a href="/personvern">personvern</a>.</small></p>
+        <button class="knapp" type="submit">Send forespørsel</button>
+      </form>
+    </div>
+  </section>
+</Base>
+<style>
+  .hero { background: linear-gradient(rgba(18,26,70,.7), rgba(18,26,70,.8)), url('/bilder/gomahuset.jpg') center/cover; color: #fff; padding: 4.5rem 0; }
+  .hero h1 { color: #fff; } .hero .ingress { color: #e7eaf7; }
+  .kalender { width: 100%; height: 600px; border: 1px solid var(--kant); border-radius: 8px; background: #fff; }
+</style>

@@ -1,0 +1,79 @@
+---
+import Base from '../layouts/Base.astro';
+import Tekst from '../components/Tekst.astro';
+import trening from '../data/trening.json';
+import klubb from '../data/klubb.json';
+const mangler = (t: string) => t.includes('MÅ FYLLES INN');
+---
+<Base tittel="Bueskyting" beskrivelse="Bueskyting for alle i Kristiansund. Treningstider, trenere, buetyper og Moseby 3D-løype.">
+  <section class="seksjon">
+    <div class="wrap">
+      <h1>Bueskyting</h1>
+      <ul class="undermeny">
+        <li><a href="#trening">Treningstider</a></li>
+        <li><a href="#trenere">Trenere</a></li>
+        <li><a href="#buetyper">Buetyper</a></li>
+        <li><a href="#3d">3D og Moseby</a></li>
+        <li><a href="#sikkerhet">Sikkerhet</a></li>
+        <li><a href="#kroppstuning">Kroppstuning</a></li>
+        <li><a href="#klaer">Klubbklær</a></li>
+      </ul>
+      <div class="to-kol" style="margin-top:2rem">
+        <Tekst side="bueskyting" />
+        <img src="/bilder/skytter-4.webp" alt="Bueskytter på Gomabanen" style="border-radius:10px" />
+      </div>
+    </div>
+  </section>
+
+  <section class="seksjon grå" id="trening">
+    <div class="wrap">
+      <h2 style="margin-top:0">Treningstider</h2>
+      <div class="rutenett">
+        {trening.sesonger.map((s) => (
+          <div class="kort"><div class="innhold">
+            <h3>{s.navn}</h3>
+            <p><strong>{s.periode}</strong><br />
+            <span class={mangler(s.tider) ? 'mangler' : ''}>{s.tider}</span><br />
+            {s.sted}</p>
+          </div></div>
+        ))}
+      </div>
+      <p>Alle er hjertelig velkomne! Aldersgrense {trening.aldersgrense}. Nye medlemmer tas inn via nybegynnerkurs, se <a href="/bli-medlem">Bli medlem</a>.</p>
+    </div>
+  </section>
+
+  <section class="seksjon" id="trenere">
+    <div class="wrap">
+      <h2 style="margin-top:0">Trenere og aktivitetsledere</h2>
+      <div class="rutenett">
+        {klubb.trenere.map((t) => <div class="kort"><div class="innhold"><h3>{t.navn}</h3><p>{t.rolle}</p></div></div>)}
+      </div>
+      <p><strong>Aktivitetsledere:</strong> {klubb.aktivitetsledere.join(', ')}</p>
+    </div>
+  </section>
+
+  <section class="seksjon grå" id="buetyper"><div class="wrap"><Tekst side="buetyper" visTittel /></div></section>
+
+  <section class="seksjon" id="3d">
+    <div class="wrap to-kol">
+      <Tekst side="3d" visTittel />
+      <img src="/bilder/3d.jpg" alt="3D-mål i Moseby-løypa" style="border-radius:10px;margin-top:2.5rem" loading="lazy" />
+    </div>
+  </section>
+
+  <section class="seksjon grå" id="sikkerhet"><div class="wrap"><Tekst side="sikkerhet" visTittel /></div></section>
+
+  <section class="seksjon" id="kroppstuning">
+    <div class="wrap to-kol">
+      <Tekst side="kroppstuning" visTittel />
+      <img src="/bilder/kroppstuning.jpg" alt="Kroppstuning for bueskyttere" style="border-radius:10px;margin-top:2.5rem" loading="lazy" />
+    </div>
+  </section>
+
+  <section class="seksjon grå" id="klaer">
+    <div class="wrap to-kol">
+      <Tekst side="klaer" visTittel />
+      <img src="/bilder/klubbgenser.jpg" alt="IL Goma klubbgenser" style="border-radius:10px;margin-top:2.5rem;max-width:380px" loading="lazy" />
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import Tekst from '../components/Tekst.astro';
+import klubb from '../data/klubb.json';
+const kart = (a: string) => `https://www.openstreetmap.org/search?query=${encodeURIComponent(a)}`;
+---
+<Base tittel="Om klubben" beskrivelse="IL Goma ble stiftet i 1921. Historie, styre og kontaktinformasjon.">
+  <section class="seksjon">
+    <div class="wrap to-kol">
+      <div>
+        <h1>Om IL Goma</h1>
+        <Tekst side="historie" />
+      </div>
+      <div class="galleri" style="align-content:start">
+        <img src="/bilder/sankthans.jpg" alt="St. Hans på Gomabanen" loading="lazy" />
+        <img src="/bilder/sommergrilling.jpg" alt="Sommergrilling" loading="lazy" />
+        <img src="/bilder/klubbhus.jpg" alt="Klubbhuset" loading="lazy" />
+        <img src="/bilder/sommerstevne.jpg" alt="Internt stevne" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section class="seksjon grå" id="styret">
+    <div class="wrap">
+      <h2 style="margin-top:0">Styret</h2>
+      <table class="pristabell"><tbody>
+        {klubb.styre.map((s) => <tr><td>{s.navn}</td><td style="font-weight:400">{s.rolle}</td></tr>)}
+      </tbody></table>
+    </div>
+  </section>
+
+  <section class="seksjon" id="kontakt">
+    <div class="wrap to-kol">
+      <div>
+        <h2 style="margin-top:0">Kontakt</h2>
+        <p>E-post: <a href={`mailto:${klubb.epost}`}>{klubb.epost}</a><br />
+        Telefon: <a href={`tel:${klubb.telefon.replace(/\s/g, '')}`}>{klubb.telefon}</a><br />
+        Facebook: <a href={klubb.facebook}>Gomabueskyttere</a></p>
+        <p>Vil du leie Gomahuset? Bruk <a href="/gomahuset#forespørsel">forespørselsskjemaet</a>.</p>
+      </div>
+      <div>
+        <h2 style="margin-top:0">Her finner du oss</h2>
+        {klubb.adresser.map((a) => <p><strong>{a.navn}</strong><br />{a.adresse}<br /><a href={kart(a.adresse)}>Vis i kart</a></p>)}
+      </div>
+    </div>
+  </section>
+</Base>

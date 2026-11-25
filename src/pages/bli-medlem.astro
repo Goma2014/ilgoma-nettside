@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import Tekst from '../components/Tekst.astro';
+import m from '../data/medlemskap.json';
+import klubb from '../data/klubb.json';
+---
+<Base tittel="Bli medlem" beskrivelse="Bli bueskytter i IL Goma. Nybegynnerkurs, priser og innmelding via MinIdrett.">
+  <section class="seksjon">
+    <div class="wrap to-kol">
+      <div>
+        <h1>Bli bueskytter!</h1>
+        <Tekst side="bli-medlem" />
+      </div>
+      <img src="/bilder/skytter-3.webp" alt="Bueskytter som sikter" style="border-radius:10px" />
+    </div>
+  </section>
+
+  <section class="seksjon grå">
+    <div class="wrap">
+      <h2 style="margin-top:0">Slik blir du medlem</h2>
+      <ol class="steg">
+        <li><strong>Ta nybegynnerkurs ({m.nybegynnerkurs.pris} kr).</strong> {m.nybegynnerkurs.tekst} {m.nybegynnerkurs.nesteKurs} <a href={klubb.facebook}>Gå til Facebook-siden</a>.</li>
+        <li><strong>Meld deg inn i MinIdrett.</strong> Opprett en bruker, søk opp «IL Goma» og velg å bli medlem.</li>
+        <li><strong>Kom på trening!</strong> Se <a href="/bueskyting#trening">treningstider</a>.</li>
+      </ol>
+      <p><a class="knapp" href={klubb.minidrett}>Meld deg inn i MinIdrett</a></p>
+    </div>
+  </section>
+
+  <section class="seksjon">
+    <div class="wrap">
+      <h2 style="margin-top:0">Priser</h2>
+      <table class="pristabell">
+        <tbody>
+          {m.priser.map((p) => <tr><td>{p.navn}<br /><small>{p.info}</small></td><td>{p.pris.toLocaleString('nb-NO')} kr / {p.per}</td></tr>)}
+        </tbody>
+      </table>
+      <p>Spørsmål? Send e-post til <a href={`mailto:${klubb.epost}`}>{klubb.epost}</a>.</p>
+    </div>
+  </section>
+</Base>
+<style>.steg { max-width: 46rem; padding-left: 1.3rem; } .steg li { margin-bottom: 1rem; }</style>

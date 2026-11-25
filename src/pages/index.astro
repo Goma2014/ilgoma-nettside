@@ -1,0 +1,60 @@
+---
+import Base from '../layouts/Base.astro';
+import Sponsorer from '../components/Sponsorer.astro';
+import { getCollection } from 'astro:content';
+const nyheter = (await getCollection('nyheter')).sort((a, b) => b.data.dato.valueOf() - a.data.dato.valueOf()).slice(0, 3);
+const fmt = (d: Date) => d.toLocaleDateString('nb-NO', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base>
+  <section class="hero">
+    <div class="wrap">
+      <p class="over">Idrettslag i Kristiansund siden 1921</p>
+      <h1>Bueskyting for alle – og en klubb for deg som liker å ha det gøy</h1>
+      <p class="ingress">Trivsel gir motivasjon, og motivasjon gir prestasjon. Vi har trening hele året, egen 3D-løype i Moseby og klubbhus midt i byen.</p>
+      <div class="knapper">
+        <a class="knapp" href="/bli-medlem">Bli medlem</a>
+        <a class="knapp sekundær" href="/gomahuset">Leie Gomahuset</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seksjon">
+    <div class="wrap rutenett">
+      <a class="kort lenkekort" href="/bueskyting"><img src="/bilder/skytter-1.webp" alt="Bueskyttere på trening" /><div class="innhold"><h3>Bueskyting</h3><p>Treningstider, buetyper og Moseby 3D-løype.</p></div></a>
+      <a class="kort lenkekort" href="/bli-medlem"><img src="/bilder/skytter-3.webp" alt="Bueskytter som sikter" /><div class="innhold"><h3>Prøv bueskyting</h3><p>Nybegynnerkurs for alle fra 10 til 100 år.</p></div></a>
+      <a class="kort lenkekort" href="/gomahuset"><img src="/bilder/gomahuset.jpg" alt="Gomahuset" /><div class="innhold"><h3>Leie Gomahuset</h3><p>Plass til 50–60 gjester. Se ledige datoer og send forespørsel.</p></div></a>
+    </div>
+  </section>
+
+  <section class="seksjon grå">
+    <div class="wrap">
+      <h2 style="margin-top:0">Siste nytt</h2>
+      <div class="rutenett">
+        {nyheter.map((n) => (
+          <a class="kort lenkekort" href={`/nytt/${n.id}`}>
+            {n.data.bilde && <img src={n.data.bilde} alt="" loading="lazy" />}
+            <div class="innhold"><small>{fmt(n.data.dato)}</small><h3>{n.data.tittel}</h3><p>{n.data.ingress}</p></div>
+          </a>
+        ))}
+      </div>
+      <p><a href="/nytt">Se alle nyheter →</a></p>
+    </div>
+  </section>
+
+  <section class="seksjon">
+    <div class="wrap">
+      <h2 style="margin-top:0">Takk til våre samarbeidspartnere</h2>
+      <p>Uten god støtte fra lokalt næringsliv hadde vi ikke klart å skape aktivitet for så mange. <a href="/stott-oss">Bli samarbeidspartner</a>.</p>
+      <Sponsorer />
+    </div>
+  </section>
+</Base>
+<style>
+  .hero { background: linear-gradient(rgba(18,26,70,.72), rgba(18,26,70,.82)), url('/bilder/skytter-2.webp') center/cover; color: #fff; padding: 5rem 0 4.5rem; }
+  .hero h1 { color: #fff; max-width: 40rem; }
+  .hero .ingress { color: #e7eaf7; }
+  .over { color: var(--gul); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: .9rem; }
+  .knapper { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+  :global(.lenkekort) { text-decoration: none; color: inherit; transition: transform .15s; }
+  :global(.lenkekort:hover) { transform: translateY(-3px); }
+</style>
