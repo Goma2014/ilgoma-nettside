@@ -22,6 +22,7 @@ content:
       - { name: dato, label: Dato, type: date, required: true }
       - { name: bilde, label: Hovedbilde, type: image }
       - { name: ingress, label: Kort sammendrag (vises i lister), type: text }
+      - { name: fremhevet, label: Fremhev seksjonen som har dette ordet i overskriften (valgfritt), type: string }
       - name: nokkeltall
         label: Nøkkeltall (valgfritt, vises i rapporten)
         type: object

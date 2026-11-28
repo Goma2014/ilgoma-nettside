@@ -2,12 +2,13 @@
 tittel: Aktivitetsrapport 2026
 dato: 2026-11-28
 bilde: /bilder/2026-nm3d-gull-hedda.jpg
-ingress: To NM-gull i 3D, pallplass på Kobberpila, dommere i to NM, en full stevnesommer, Sprudle familiefest med 1 000 besøkende, baklukeloppis, julegrantenning, en seniorgjeng som har pusset opp klubbhuset og ny treningshall på Atlanten Stadion. Her er 2026 i IL Goma så langt.
+ingress: To NM-gull i 3D, vårt eget stevne Vårpila, pallplass på Kobberpila, dommere i to NM, en full stevnesommer, Sprudle familiefest med 1 000 besøkende, baklukeloppis, julegrantenning, en seniorgjeng som har pusset opp klubbhuset og ny treningshall på Atlanten Stadion. Her er 2026 i IL Goma så langt.
 nokkeltall:
   - { tall: "2", tekst: "NM-gull i 3D" }
   - { tall: "9", tekst: "stevner med Goma-skyttere" }
   - { tall: "1 000", tekst: "besøkende på Sprudle" }
   - { tall: "2", tekst: "faste treninger i uka" }
+fremhevet: Vårpila
 ---
 
 ## Trening hele året
@@ -56,9 +57,19 @@ IL Goma gikk som vanlig i borgertoget.
 
 En barnehage fikk prøve bueskyting sammen med oss.
 
-## Vårpila (23. mai)
+## Vårt eget stevne: Vårpila (24. mai)
 
-Vi deltok på Vårpila.
+![Rikard Husy fra Ålesund Bueskyttere på vårt stevne Vårpila](/bilder/2026-varpila-rikard.jpg)
+
+![Vinnerne på Vårpila samlet foran pallen](/bilder/2026-varpila-vinnere.jpg)
+
+![Monica Betten og Maria Pedersen på pallen på vårt eget stevne](/bilder/2026-varpila-pallen.jpg)
+
+![Premierte skyttere på Vårpila](/bilder/2026-varpila-1.jpg)
+
+Vårpila er det ene stevnet vi arrangerer selv i år, og det er årets store dag for klubben. Skytterne konkurrerte i skogen, og premieutdelingen foregikk på pallen vår, omkranset av Goma-flagg. Monica Betten og Maria Pedersen fra IL Goma sto begge på pallen.
+
+En stor takk til alle frivillige som gjorde stevnet mulig.
 
 ## Baklukeloppis (6. juni)
 

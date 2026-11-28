@@ -9,6 +9,7 @@ const nyheter = defineCollection({
     dato: z.coerce.date(),
     bilde: z.string().optional(),
     ingress: z.string().optional(),
+    fremhevet: z.string().optional(),
     nokkeltall: z.array(z.object({ tall: z.string(), tekst: z.string() })).optional(),
   }),
 });

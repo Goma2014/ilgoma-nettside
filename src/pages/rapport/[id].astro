@@ -18,7 +18,7 @@ html = html.replace(/<p>(<img [^>]*>)<\/p>/g, (_m, img) => {
   return `<figure>${img}${alt ? `<figcaption>${alt}</figcaption>` : ''}</figure>`;
 });
 html = html.replace(/<p><em>Foto: ([^<]*)<\/em><\/p>/g, '<p class="kreditt">Foto: $1</p>');
-html = html.replace(/(<figure>[\s\S]*?<\/figure>\s*){2,}/g, (m) => `<div class="bildegruppe">${m}</div>`);
+html = html.replace(/(<figure>(?:(?!<\/figure>)[\s\S])*<\/figure>\s*){2,}/g, (m) => `<div class="bildegruppe">${m}</div>`);
 // Del inn i seksjoner per h2, så hver aktivitet holdes samlet.
 const deler = html.split(/(?=<h2)/).filter((d) => d.trim());
 
@@ -64,7 +64,10 @@ const datoTekst = n.data.dato.toLocaleDateString('nb-NO', { day: 'numeric', mont
   </section>
 
   <main class="innhold">
-    {deler.map((d) => <section class="aktivitet" set:html={d} />)}
+    {deler.map((d) => {
+      const fremhev = n.data.fremhevet && (d.match(/<h2[^>]*>([\s\S]*?)<\/h2>/)?.[1] ?? '').includes(n.data.fremhevet);
+      return <section class={fremhev ? 'aktivitet fremhevet' : 'aktivitet'} set:html={d} />;
+    })}
   </main>
 
   <section class="takk">
@@ -141,6 +144,15 @@ const datoTekst = n.data.dato.toLocaleDateString('nb-NO', { day: 'numeric', mont
   .kreditt { font-size: 8pt; color: #8a8f9c; margin-top: -1mm !important; }
   blockquote { margin: 3mm 0; padding: 3mm 5mm; background: var(--lys); border-left: 1.2mm solid var(--gul); font-style: italic; }
 
+  .fremhevet { background: var(--blå); color: #fff; margin: 4mm -20mm; padding: 9mm 20mm 7mm; border-bottom: 0; break-before: page; }
+  .fremhevet h2 { color: var(--gul); font-size: 20pt; }
+  .fremhevet h2::before { background: #fff; }
+  .fremhevet p { color: rgba(255,255,255,.92); font-size: 11pt; }
+  .fremhevet figcaption { color: rgba(255,255,255,.7); }
+  .fremhevet .bildegruppe { grid-template-columns: repeat(3, 1fr); }
+  .fremhevet .bildegruppe figure:first-child { grid-column: 1 / -1; }
+  .fremhevet .bildegruppe figure:first-child img { height: 118mm; object-position: center; }
+  .fremhevet .bildegruppe figure img { height: 58mm; }
   .takk { page: takk; padding-top: 16mm; padding-bottom: 16mm; text-align: center; break-before: page; min-height: 297mm; display: flex; flex-direction: column; align-items: center; background: var(--lys); }
   .logo-liten { width: 22mm; margin-bottom: 6mm; }
   .takk h2 { font-family: 'Inter Display'; font-weight: 700; color: var(--blå); font-size: 20pt; margin: 0 0 3mm; }
