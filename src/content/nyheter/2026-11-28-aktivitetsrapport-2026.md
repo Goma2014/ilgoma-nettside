@@ -45,6 +45,12 @@ Sesongens første 3D-stevne gikk på Vinstra.
 
 IL Goma gikk som vanlig i borgertoget.
 
+## Bueskyting for barnehage (12. mai)
+
+![Barnehagebarn prøver bueskyting](/bilder/2026-barnehage.jpg)
+
+En barnehage fikk prøve bueskyting sammen med oss.
+
 ## Vårpila (23. mai)
 
 Vi deltok på Vårpila.
@@ -91,13 +97,19 @@ Også i år dro vi til Kobberpila på Røros. Simen Mahle tok 3. plass.
 
 ## NM 3D på Brekstad (12. september)
 
-Etter å ha arrangert NM i 3D i Moseby både i 2024 og 2025, deltok vi i år med 5 skyttere da NM 3D ble arrangert på Brekstad. Det ble en sterk helg for klubben: **Hedda Moe Torvik og Marthe Emilie tok begge NM-gull**, og Simen Mahle skjøt seg til finalen.
+Etter å ha arrangert NM i 3D i Moseby både i 2024 og 2025, deltok vi i år med 5 skyttere da NM 3D ble arrangert på Brekstad. Det ble en sterk helg for klubben: **Hedda Moe Torvik og Marthe Emilie Ulriksen tok begge NM-gull**, og Simen Mahle skjøt seg til finalen.
 
 ![Hedda Moe Torvik på toppen av pallen med NM-gull](/bilder/2026-nm3d-gull-hedda.jpg)
 
-![Marthe Emilie på toppen av pallen med NM-gull](/bilder/2026-nm3d-gull-marthe.jpg)
+![Marthe Emilie Ulriksen på toppen av pallen med NM-gull](/bilder/2026-nm3d-gull-marthe.jpg)
 
 ![Simen Mahle i finaleskytingen](/bilder/2026-nm3d-finale-simen.jpg)
+
+## Firmaevent for Veidekke
+
+![Firmaevent med bueskyting for Veidekke](/bilder/2026-event-veidekke.jpg)
+
+Vi arrangerte bueskytter-event for Veidekke. Firmaeventer gir klubben inntekter og viser fram bueskyting for nye folk.
 
 ## Dommere i NM
 
@@ -110,7 +122,7 @@ Klubben bidro med dommere både i NM 3D og i NM skive i sommer. Det er et viktig
 
 Vi deltok med bueskyting på Sprudle familiefest i Folkeparken, som hadde rundt 1 000 besøkende. IL Goma ble også trukket fram i Tidens Krav i forhåndsomtalen av arrangementet.
 
-## Åpen dag på brannstasjonen
+## Åpen dag på brannstasjonen (17. oktober)
 
 ![Kiosken til IL Goma på åpen dag på brannstasjonen](/bilder/2026-apen-dag-brannstasjonen.jpg)
 
