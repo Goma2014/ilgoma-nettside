@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+export async function getStaticPaths() {
+  const alle = await getCollection('nyheter');
+  return alle.map((n) => ({ params: { id: n.id }, props: { n } }));
+}
+const { n } = Astro.props;
+const { Content } = await render(n);
+const dato = n.data.dato.toLocaleDateString('nb-NO', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base tittel={n.data.tittel} beskrivelse={n.data.ingress}>
+  <article class="seksjon">
+    <div class="wrap prose">
+      <p><a href="/nytt">← Alle nyheter</a></p>
+      <small>{dato}</small>
+      <h1>{n.data.tittel}</h1>
+      {n.data.ingress && <p class="ingress">{n.data.ingress}</p>}
+      {n.data.bilde && <img src={n.data.bilde} alt="" style="border-radius:10px" />}
+      <Content />
+    </div>
+  </article>
+</Base>

@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import Tekst from '../../components/Tekst.astro';
+---
+<Base tittel="Leieavtale for Gomahuset">
+  <section class="seksjon">
+    <div class="wrap">
+      <p class="skjul-utskrift"><a href="/gomahuset">← Tilbake til Gomahuset</a> · <button class="knapp" onclick="window.print()">Skriv ut</button></p>
+      <h1>Leieavtale for Gomahuset</h1>
+      <Tekst side="leieavtale" />
+      <div class="sideskift"><Tekst side="lokalet" visTittel /></div>
+    </div>
+  </section>
+</Base>
+<style>
+  :global(.prose table) { width: 100%; border-collapse: collapse; }
+  :global(.prose td) { padding: .8rem .4rem; border-bottom: 1px solid var(--kant); }
+  @media print {
+    :global(.topp), :global(.bunn), .skjul-utskrift { display: none !important; }
+    :global(.mangler) { background: none; }
+    .sideskift { break-before: page; }
+  }
+</style>

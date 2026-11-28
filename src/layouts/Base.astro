@@ -1,0 +1,76 @@
+---
+import '../styles/global.css';
+import klubb from '../data/klubb.json';
+
+interface Props { tittel?: string; beskrivelse?: string; }
+const { tittel, beskrivelse = 'IL Goma er et idrettslag i Kristiansund, stiftet i 1921. Bueskyting for alle, Moseby 3D-løype og utleie av Gomahuset.' } = Astro.props;
+const fullTittel = tittel ? `${tittel} – IL Goma` : 'IL Goma – Bueskyting og klubbliv i Kristiansund';
+const meny = [
+  { tekst: 'Bueskyting', href: '/bueskyting' },
+  { tekst: 'Bli medlem', href: '/bli-medlem' },
+  { tekst: 'Nytt', href: '/nytt' },
+  { tekst: 'Leie Gomahuset', href: '/gomahuset' },
+  { tekst: 'Støtt oss', href: '/stott-oss' },
+  { tekst: 'Om klubben', href: '/om-klubben' },
+];
+const sti = Astro.url.pathname.replace(/\/$/, '');
+---
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{fullTittel}</title>
+  <meta name="description" content={beskrivelse} />
+  <link rel="icon" href="/bilder/logo.png" />
+</head>
+<body>
+  <header class="topp">
+    <div class="wrap topp-indre">
+      <a href="/" class="logo"><img src="/bilder/logo.png" alt="" width="44" height="44" /><span>IL Goma</span></a>
+      <details class="mobilmeny">
+        <summary aria-label="Meny">Meny</summary>
+        <nav>{meny.map((m) => <a href={m.href} aria-current={sti.startsWith(m.href) ? 'page' : undefined}>{m.tekst}</a>)}</nav>
+      </details>
+      <nav class="hovedmeny">{meny.map((m) => <a href={m.href} aria-current={sti.startsWith(m.href) ? 'page' : undefined}>{m.tekst}</a>)}</nav>
+    </div>
+  </header>
+  <main><slot /></main>
+  <footer class="bunn">
+    <div class="wrap bunn-indre">
+      <div>
+        <strong>{klubb.navn}</strong><br />
+        Stiftet {klubb.stiftet}<br />
+        Org.nr. {klubb.organisasjonsnummer}
+      </div>
+      <div>
+        <a href={`mailto:${klubb.epost}`}>{klubb.epost}</a><br />
+        <a href={`tel:${klubb.telefon.replace(/\s/g, '')}`}>{klubb.telefon}</a><br />
+        <a href={klubb.facebook}>Facebook</a>
+      </div>
+      <div>
+        <a href="/om-klubben#kontakt">Kontakt og adresser</a><br />
+        <a href="/personvern">Personvern</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+<style>
+  .topp { background: var(--blå); color: #fff; position: sticky; top: 0; z-index: 10; }
+  .topp-indre { display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 1rem; }
+  .logo { display: flex; align-items: center; gap: .6rem; color: #fff; text-decoration: none; font-weight: 800; font-size: 1.2rem; }
+  .logo img { width: 44px; height: 44px; object-fit: contain; }
+  nav a { color: #fff; text-decoration: none; font-weight: 600; }
+  nav a[aria-current='page'] { color: var(--gul); }
+  .hovedmeny { display: none; gap: 1.4rem; }
+  .mobilmeny summary { list-style: none; cursor: pointer; font-weight: 700; padding: .5rem .9rem; border: 2px solid var(--gul); border-radius: 6px; color: var(--gul); }
+  .mobilmeny summary::-webkit-details-marker { display: none; }
+  .mobilmeny nav { position: absolute; left: 0; right: 0; top: 64px; background: var(--blå); display: grid; padding: .5rem 1.25rem 1rem; }
+  .mobilmeny nav a { padding: .75rem 0; border-bottom: 1px solid rgba(255,255,255,.15); font-size: 1.1rem; }
+  @media (min-width: 900px) { .hovedmeny { display: flex; } .mobilmeny { display: none; } }
+  .bunn { background: var(--blå-mørk); color: #dfe3f5; margin-top: 3rem; padding: 2.5rem 0; }
+  .bunn a { color: #fff; }
+  .bunn-indre { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+</style>

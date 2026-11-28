@@ -1,0 +1,14 @@
+---
+// Viser teksten fra en fil i src/content/sider (redigeres i redigeringspanelet).
+// «MÅ FYLLES INN» markeres med gult, så det er lett å se hva som mangler.
+import { getEntry } from 'astro:content';
+interface Props { side: string; visTittel?: boolean; }
+const { side, visTittel = false } = Astro.props;
+const entry = await getEntry('sider', side);
+if (!entry?.rendered) throw new Error(`Fant ikke siden ${side}`);
+const html = entry.rendered.html.replaceAll('MÅ FYLLES INN', '<span class="mangler">MÅ FYLLES INN</span>');
+---
+<div class="prose">
+  {visTittel && <h2>{entry.data.tittel}</h2>}
+  <Fragment set:html={html} />
+</div>

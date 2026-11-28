@@ -1,0 +1,61 @@
+---
+import Base from '../layouts/Base.astro';
+import Tekst from '../components/Tekst.astro';
+import Sponsorer from '../components/Sponsorer.astro';
+import klubb from '../data/klubb.json';
+---
+<Base tittel="Støtt oss" beskrivelse="Støtt IL Goma: bueskytter for en dag, reklame i treningshallen, samarbeidsavtaler og Grasrotandelen.">
+  <section class="seksjon">
+    <div class="wrap">
+      <h1>Støtt oss – alle kan bidra</h1>
+      <p class="ingress">Bestill et bueskytter-event, få reklame i treningshallen eller bli samarbeidspartner. Eller gi via Grasrotandelen, det koster deg ingenting.</p>
+      <ul class="undermeny">
+        <li><a href="#event">Bueskytter for en dag</a></li>
+        <li><a href="#reklame">Reklame i treningshallen</a></li>
+        <li><a href="#samarbeid">Samarbeidspartner</a></li>
+        <li><a href="#grasrot">Grasrotandelen</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seksjon grå" id="event">
+    <div class="wrap to-kol">
+      <Tekst side="bueskytter-for-en-dag" visTittel />
+      <div class="galleri" style="margin-top:2.5rem">
+        <img src="/bilder/event-1.jpg" alt="Bueskytter-event" loading="lazy" />
+        <img src="/bilder/event-2.jpg" alt="Bueskytter-event" loading="lazy" />
+        <img src="/bilder/event-3.jpg" alt="Bueskytter-event" loading="lazy" />
+        <img src="/bilder/event-4.jpg" alt="Bueskytter-event" loading="lazy" />
+      </div>
+    </div>
+    <div class="wrap"><p><a class="knapp" href={`mailto:${klubb.epost}?subject=Bueskytter%20for%20en%20dag`}>Bestill event</a></p></div>
+  </section>
+
+  <section class="seksjon" id="reklame">
+    <div class="wrap to-kol">
+      <Tekst side="reklame" visTittel />
+      <div class="galleri" style="margin-top:2.5rem">
+        <img src="/bilder/reklame-glassvegg.jpg" alt="Reklame på glassveggen" loading="lazy" />
+        <img src="/bilder/reklame-yttervegg.jpg" alt="Reklame på ytterveggen" loading="lazy" />
+        <img src="/bilder/hall-1.jpg" alt="Treningshallen" loading="lazy" />
+        <img src="/bilder/nordmorsveien.jpg" alt="Hallen sett fra Nordmørsveien" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section class="seksjon grå" id="samarbeid">
+    <div class="wrap">
+      <Tekst side="samarbeid" visTittel />
+      <h3>Våre samarbeidspartnere i dag</h3>
+      <Sponsorer />
+    </div>
+  </section>
+
+  <section class="seksjon" id="grasrot">
+    <div class="wrap prose">
+      <h2 style="margin-top:0">Grasrotandelen</h2>
+      <p>Spiller du hos Norsk Tipping? Velg IL Goma som grasrotmottaker, så går en del av innsatsen din til klubben, uten at det koster deg noe.</p>
+      <p><strong>Send SMS «Grasrotandelen {klubb.organisasjonsnummer}» til 2020.</strong></p>
+    </div>
+  </section>
+</Base>

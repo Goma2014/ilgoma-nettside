@@ -1,0 +1,13 @@
+{
+  "priser": [
+    { "navn": "Medlemskontingent", "pris": 300, "per": "år", "info": "Obligatorisk for alle medlemmer" },
+    { "navn": "Medlemskontingent familie", "pris": 550, "per": "år", "info": "Familiepris" },
+    { "navn": "Treneravgift ungdom", "pris": 1700, "per": "år", "info": "Aktive ungdommer fra 10 til fylte 18 år" },
+    { "navn": "Treneravgift voksen", "pris": 2000, "per": "år", "info": "Bueskyttere over 18 år" }
+  ],
+  "nybegynnerkurs": {
+    "pris": 300,
+    "tekst": "Nybegynnerkurset koster 300 kr og inkluderer medlemskontingenten for ett år. Etter fire kurskvelder velger du selv om du vil fortsette. Treneravgiften kommer da i tillegg til kontingenten. Kurset er åpent for alle mellom 10 og 100 år.",
+    "nesteKurs": "Neste kurs annonseres på Facebook-siden vår."
+  }
+}

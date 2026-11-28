@@ -1,0 +1,154 @@
+# Oppsett for redigeringspanelet (Pages CMS, https://app.pagescms.org).
+# Logg inn med GitHub og velg repoet ilgoma-nettside.
+media:
+  input: public/bilder
+  output: /bilder
+
+content:
+  - name: nyheter
+    label: Nyheter
+    type: collection
+    path: src/content/nyheter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [tittel, dato]
+      primary: tittel
+      sort: [dato]
+      default:
+        sort: dato
+        order: desc
+    fields:
+      - { name: tittel, label: Tittel, type: string, required: true }
+      - { name: dato, label: Dato, type: date, required: true }
+      - { name: bilde, label: Hovedbilde, type: image }
+      - { name: ingress, label: Kort sammendrag (vises i lister), type: text }
+      - { name: body, label: Tekst, type: rich-text }
+
+  - name: gomahuset
+    label: Gomahuset – priser og info
+    type: file
+    path: src/data/utleie.json
+    fields:
+      - { name: ingress, label: Ingress øverst på siden, type: text }
+      - { name: kapasitet, label: Kapasitet, type: string }
+      - { name: fasiliteter, label: Fasiliteter, type: string, list: true }
+      - { name: tilgjengelighet, label: Leieperiode, type: text }
+      - name: priser
+        label: Priser
+        type: object
+        list: true
+        fields:
+          - { name: navn, label: Hva, type: string }
+          - { name: pris, label: Pris, type: string }
+      - { name: betaling, label: Betaling, type: string }
+      - { name: kontaktTelefon, label: Telefon for utleie, type: string }
+      - { name: kontaktEpost, label: E-post for utleie, type: string }
+      - { name: googleKalenderId, label: Google-kalender-ID, type: string }
+      - { name: leieavtalePdf, label: Leieavtale som PDF (valgfritt), type: file }
+      - { name: bilder, label: Bilder av lokalet, type: image, list: true }
+
+  - name: medlemskap
+    label: Medlemskap og priser
+    type: file
+    path: src/data/medlemskap.json
+    fields:
+      - name: priser
+        label: Priser
+        type: object
+        list: true
+        fields:
+          - { name: navn, label: Navn, type: string }
+          - { name: pris, label: Pris (kr), type: number }
+          - { name: per, label: Per, type: string }
+          - { name: info, label: Forklaring, type: string }
+      - name: nybegynnerkurs
+        label: Nybegynnerkurs
+        type: object
+        fields:
+          - { name: pris, label: Pris (kr), type: number }
+          - { name: tekst, label: Beskrivelse, type: text }
+          - { name: nesteKurs, label: Neste kurs, type: string }
+
+  - name: trening
+    label: Treningstider
+    type: file
+    path: src/data/trening.json
+    fields:
+      - name: sesonger
+        label: Sesonger
+        type: object
+        list: true
+        fields:
+          - { name: navn, label: Navn, type: string }
+          - { name: periode, label: Periode, type: string }
+          - { name: tider, label: Tider, type: string }
+          - { name: sted, label: Sted, type: string }
+      - { name: aldersgrense, label: Aldersgrense, type: string }
+
+  - name: klubb
+    label: Klubbinfo, styre og trenere
+    type: file
+    path: src/data/klubb.json
+    fields:
+      - { name: navn, label: Klubbnavn, type: string }
+      - { name: slagord, label: Slagord, type: string }
+      - { name: stiftet, label: Stiftet, type: number }
+      - { name: telefon, label: Telefon, type: string }
+      - { name: epost, label: E-post, type: string }
+      - { name: facebook, label: Facebook-lenke, type: string }
+      - { name: minidrett, label: MinIdrett-lenke, type: string }
+      - { name: organisasjonsnummer, label: Organisasjonsnummer, type: string }
+      - name: adresser
+        label: Adresser
+        type: object
+        list: true
+        fields:
+          - { name: navn, label: Navn, type: string }
+          - { name: adresse, label: Adresse, type: string }
+      - name: styre
+        label: Styret
+        type: object
+        list: true
+        fields:
+          - { name: navn, label: Navn, type: string }
+          - { name: rolle, label: Rolle, type: string }
+      - name: trenere
+        label: Trenere
+        type: object
+        list: true
+        fields:
+          - { name: navn, label: Navn, type: string }
+          - { name: rolle, label: Kompetanse, type: string }
+      - { name: aktivitetsledere, label: Aktivitetsledere, type: string, list: true }
+
+  - name: sponsorer
+    label: Sponsorer
+    type: file
+    path: src/data/sponsorer.json
+    fields:
+      - name: hovedsponsor
+        label: Hovedsponsor
+        type: object
+        fields:
+          - { name: navn, label: Navn, type: string }
+          - { name: logo, label: Logo, type: image }
+          - { name: lenke, label: Nettside, type: string }
+      - name: sponsorer
+        label: Andre sponsorer
+        type: object
+        list: true
+        fields:
+          - { name: navn, label: Navn, type: string }
+          - { name: logo, label: Logo, type: image }
+          - { name: lenke, label: Nettside, type: string }
+
+  - name: sider
+    label: Tekster på sidene
+    type: collection
+    path: src/content/sider
+    view:
+      fields: [tittel]
+      primary: tittel
+    fields:
+      - { name: tittel, label: Overskrift, type: string }
+      - { name: body, label: Tekst, type: rich-text }

@@ -1,0 +1,15 @@
+---
+import s from '../data/sponsorer.json';
+const alle = [s.hovedsponsor, ...s.sponsorer];
+---
+<div class="sponsorer">
+  {alle.map((sp) => {
+    const innhold = sp.logo ? <img src={sp.logo} alt={sp.navn} loading="lazy" /> : <span>{sp.navn}</span>;
+    return sp.lenke ? <a href={sp.lenke} rel="noopener">{innhold}</a> : <div>{innhold}</div>;
+  })}
+</div>
+<style>
+  .sponsorer { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); align-items: center; }
+  .sponsorer > * { background: #fff; border: 1px solid var(--kant); border-radius: 8px; height: 100px; display: flex; align-items: center; justify-content: center; padding: .75rem; text-decoration: none; font-weight: 700; text-align: center; color: var(--blå); }
+  .sponsorer img { max-height: 76px; width: auto; object-fit: contain; }
+</style>

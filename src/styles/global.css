@@ -1,0 +1,48 @@
+:root {
+  --blå: #1b2560;
+  --blå-mørk: #121a46;
+  --gul: #f2c31b;
+  --tekst: #1d1d1f;
+  --grå: #f4f5f8;
+  --kant: #dfe2ea;
+  --maks: 1100px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--tekst);
+  line-height: 1.6;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--blå); }
+h1, h2, h3 { line-height: 1.2; color: var(--blå); }
+h1 { font-size: clamp(1.9rem, 4vw, 2.8rem); margin: 0 0 .5rem; }
+h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); margin-top: 2.5rem; }
+.wrap { max-width: var(--maks); margin: 0 auto; padding: 0 1.25rem; }
+.seksjon { padding: 3rem 0; }
+.seksjon.grå { background: var(--grå); }
+.ingress { font-size: 1.2rem; color: #444; max-width: 46rem; }
+.prose { max-width: 46rem; }
+.prose img { border-radius: 8px; margin: 1rem 0; }
+.knapp { display: inline-block; background: var(--gul); color: var(--blå-mørk); font-weight: 700; padding: .8rem 1.4rem; border-radius: 6px; text-decoration: none; border: 0; font-size: 1rem; cursor: pointer; }
+.knapp:hover { filter: brightness(1.05); }
+.knapp.sekundær { background: transparent; color: #fff; border: 2px solid #fff; }
+.rutenett { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.kort { background: #fff; border: 1px solid var(--kant); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+.kort img { aspect-ratio: 4/3; object-fit: cover; width: 100%; }
+.kort .innhold { padding: 1rem 1.2rem 1.3rem; }
+.kort h3 { margin: 0 0 .4rem; }
+.pristabell { width: 100%; border-collapse: collapse; max-width: 40rem; }
+.pristabell td { padding: .7rem .5rem; border-bottom: 1px solid var(--kant); vertical-align: top; }
+.pristabell td:last-child { text-align: right; font-weight: 700; white-space: nowrap; }
+.pristabell small { color: #666; }
+.galleri { display: grid; gap: .75rem; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+.galleri img { aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; width: 100%; }
+.mangler { background: #fff3c4; padding: 0 .3rem; border-radius: 3px; }
+form.skjema { display: grid; gap: 1rem; max-width: 36rem; }
+form.skjema label { display: grid; gap: .3rem; font-weight: 600; }
+form.skjema input, form.skjema select, form.skjema textarea { font: inherit; padding: .65rem .75rem; border: 1px solid #b9bfcc; border-radius: 6px; }
+form.skjema .avkryss { display: flex; gap: .5rem; align-items: flex-start; font-weight: 400; }
+.to-kol { display: grid; gap: 2rem; grid-template-columns: 1fr; }
+@media (min-width: 800px) { .to-kol { grid-template-columns: 1fr 1fr; } }
+.undermeny { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
+.undermeny a { display: inline-block; padding: .35rem .8rem; border-radius: 99px; background: var(--grå); text-decoration: none; font-size: .95rem; }

@@ -1,0 +1,13 @@
+{
+  "hovedsponsor": { "navn": "Sparebanken Møre", "logo": "/bilder/sponsor-sbm.webp", "lenke": "" },
+  "sponsorer": [
+    { "navn": "Sparebank 1 SMN", "logo": "", "lenke": "https://www.sparebank1.no/nb/nordvest/om-oss.html" },
+    { "navn": "Varig Forsikring", "logo": "", "lenke": "" },
+    { "navn": "Kvernberget Print & Reklame", "logo": "/bilder/sponsor-kvernberget.png", "lenke": "https://www.kvernberget.no/" },
+    { "navn": "Mekonomen Bilverksted", "logo": "/bilder/sponsor-mekonomen.png", "lenke": "https://www.mekonomen.no/butikk-verksted/kristiansund/nringsveien-3-at6040-011" },
+    { "navn": "Einar Engvig AS", "logo": "/bilder/sponsor-engvig.jpg", "lenke": "https://www.engvig.no/" },
+    { "navn": "NEAS", "logo": "/bilder/sponsor-neas.jpg", "lenke": "https://www.neas.mr.no/" },
+    { "navn": "Triohus", "logo": "/bilder/sponsor-triohus.jpg", "lenke": "https://triohus.no/" },
+    { "navn": "Pets Kristiansund", "logo": "/bilder/sponsor-pets.jpg", "lenke": "https://www.pets.no/butikker/pets-dyrebutikken-kristiansund/" }
+  ]
+}
