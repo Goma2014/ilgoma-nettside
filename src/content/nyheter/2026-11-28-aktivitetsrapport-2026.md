@@ -81,11 +81,14 @@ Klubben bidro med dommere både i NM 3D og i NM skive i sommer. Det er et viktig
 
 ## Sprudle familiefest i Folkeparken (13. september)
 
+![Bueskyttere fra IL Goma sammen med representanter for Sprudle og NEAS alliidrett](/bilder/2026-sprudle.jpg)
+*Foto: Tidens Krav*
+
 Vi deltok med bueskyting på Sprudle familiefest i Folkeparken, som hadde rundt 1 000 besøkende. IL Goma ble også trukket fram i Tidens Krav i forhåndsomtalen av arrangementet.
 
 ## Ny treningshall (oktober)
 
-12. oktober flyttet vi inn i ny innendørshall på Norodd-løpebanen under tribunene på Atlanten Stadion. Her holdes vintertreningene mandager og onsdager.
+12. oktober flyttet vi inn i ny innendørshall på Norodd-løpebanen under tribunene på Atlanten Stadion. Her holdes vintertreningene mandager og onsdager. Den nye hallen gir oss svært gode fasiliteter i et ekte idrettsmiljø, og ikke minst oppvarmede lokaler hele vinteren.
 
 ## Stevne på Vigra (15. november)
 

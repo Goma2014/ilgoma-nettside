@@ -25,11 +25,6 @@ event-1.jpg              9P7knlU5/IMG_9998.JPG
 event-2.jpg              BXoPJLDq/IMG_9997.JPG
 event-3.jpg              FdE1qXad/IMG_9996.JPG
 event-4.jpg              28JPPcis/IMG_9995.JPG
-reklame-glassvegg.jpg    gGMedh0l/SponsorGlassvegg.jpg
-reklame-yttervegg.jpg    FGi3Ih9P/SponsorYttervegg.jpg
-hall-1.jpg               Zm5w9B54/Yoga03.jpg
-hall-2.jpg               wOxuRNBG/Yoga02.jpg
-nordmorsveien.jpg        AkeCRJSn/Nordmrsveien02.jpg
 sponsor-sbm.webp         VprNRhjT/SBM_Hovedlogo_mrk__msi___png.webp
 sponsorer-2023.png       YHzoQJyG/GomaSponsor2023.png
 sponsor-kvernberget.png  xOuc1niA/Kvernberget-Svart-BG.png

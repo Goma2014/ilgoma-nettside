@@ -84,6 +84,7 @@ content:
           - { name: tider, label: Tider, type: string }
           - { name: sted, label: Sted, type: string }
       - { name: aldersgrense, label: Aldersgrense, type: string }
+      - { name: hall, label: Om innendørshallen, type: text }
 
   - name: klubb
     label: Klubbinfo, styre og trenere

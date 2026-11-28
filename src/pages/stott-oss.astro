@@ -4,14 +4,13 @@ import Tekst from '../components/Tekst.astro';
 import Sponsorer from '../components/Sponsorer.astro';
 import klubb from '../data/klubb.json';
 ---
-<Base tittel="Støtt oss" beskrivelse="Støtt IL Goma: bueskytter for en dag, reklame i treningshallen, samarbeidsavtaler og Grasrotandelen.">
+<Base tittel="Støtt oss" beskrivelse="Støtt IL Goma: bueskytter for en dag, samarbeidsavtaler og Grasrotandelen.">
   <section class="seksjon">
     <div class="wrap">
       <h1>Støtt oss – alle kan bidra</h1>
-      <p class="ingress">Bestill et bueskytter-event, få reklame i treningshallen eller bli samarbeidspartner. Eller gi via Grasrotandelen, det koster deg ingenting.</p>
+      <p class="ingress">Bestill et bueskytter-event eller bli samarbeidspartner. Eller gi via Grasrotandelen, det koster deg ingenting.</p>
       <ul class="undermeny">
         <li><a href="#event">Bueskytter for en dag</a></li>
-        <li><a href="#reklame">Reklame i treningshallen</a></li>
         <li><a href="#samarbeid">Samarbeidspartner</a></li>
         <li><a href="#grasrot">Grasrotandelen</a></li>
       </ul>
@@ -31,19 +30,7 @@ import klubb from '../data/klubb.json';
     <div class="wrap"><p><a class="knapp" href={`mailto:${klubb.epost}?subject=Bueskytter%20for%20en%20dag`}>Bestill event</a></p></div>
   </section>
 
-  <section class="seksjon" id="reklame">
-    <div class="wrap to-kol">
-      <Tekst side="reklame" visTittel />
-      <div class="galleri" style="margin-top:2.5rem">
-        <img src="/bilder/reklame-glassvegg.jpg" alt="Reklame på glassveggen" loading="lazy" />
-        <img src="/bilder/reklame-yttervegg.jpg" alt="Reklame på ytterveggen" loading="lazy" />
-        <img src="/bilder/hall-1.jpg" alt="Treningshallen" loading="lazy" />
-        <img src="/bilder/nordmorsveien.jpg" alt="Hallen sett fra Nordmørsveien" loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-  <section class="seksjon grå" id="samarbeid">
+  <section class="seksjon" id="samarbeid">
     <div class="wrap">
       <Tekst side="samarbeid" visTittel />
       <h3>Våre samarbeidspartnere i dag</h3>
@@ -51,7 +38,7 @@ import klubb from '../data/klubb.json';
     </div>
   </section>
 
-  <section class="seksjon" id="grasrot">
+  <section class="seksjon grå" id="grasrot">
     <div class="wrap prose">
       <h2 style="margin-top:0">Grasrotandelen</h2>
       <p>Spiller du hos Norsk Tipping? Velg IL Goma som grasrotmottaker, så går en del av innsatsen din til klubben, uten at det koster deg noe.</p>
