@@ -6,11 +6,10 @@ Denne avtalen gjelder leie av Gomahuset, Kitty Willhelmsens gate 1, 6512 Kristia
 
 ## 1. Leieperiode og pris
 
-- Leieperioden er fra **fredag kl. MÅ FYLLES INN** til **søndag kl. MÅ FYLLES INN**.
-- Leieprisen er **6 000 kr** for hel helg. Vask etter leieforholdet er inkludert.
-- Depositum: **MÅ FYLLES INN** kr. Depositumet betales tilbake innen 14 dager etter leieperioden, med fradrag for eventuelle skader, manglende opprydding eller tapt nøkkel.
-- Betaling skjer med Vipps til #550723 innen **MÅ FYLLES INN** (f.eks. 14 dager før leieperioden).
-- Avbestilling: **MÅ FYLLES INN** (f.eks. gratis avbestilling inntil 30 dager før, deretter betales 50 %).
+- Leieperioden er fra **fredag morgen** til **søndag kveld**.
+- Leieprisen er **6 000 kr** for hel helg. Vask etter leieforholdet er inkludert. Det kreves ikke depositum.
+- Leien betales med Vipps til #550723 **før leiedatoen**.
+- **Avbestilling:** Gratis avbestilling inntil én måned før leiedatoen. Ved avbestilling senere enn én måned før betales 50 % av leien. Innenfor én uke før leiedatoen kan leieforholdet ikke avbestilles, og full leie betales.
 
 ## 2. Ansvarlig leietaker
 
@@ -20,8 +19,8 @@ Denne avtalen gjelder leie av Gomahuset, Kitty Willhelmsens gate 1, 6512 Kristia
 
 ## 3. Ordensregler
 
-- Lokalet kan brukes av maksimalt **MÅ FYLLES INN** personer samtidig.
-- Det skal være ro i og rundt lokalet etter kl. **MÅ FYLLES INN** av hensyn til naboene.
+- Lokalet kan brukes av maksimalt **60 personer** samtidig.
+- Det skal være ro utendørs etter **kl. 24.00** av hensyn til naboene.
 - Røyking og bruk av levende lys er forbudt innendørs. Røyking skjer kun på anvist plass ute.
 - Det er ikke skjenkebevilling. Alkohol kan bare medbringes til lukkede, private selskap. Salg av alkohol er ikke tillatt.
 - Ulovlige rusmidler er forbudt.
@@ -37,13 +36,13 @@ Denne avtalen gjelder leie av Gomahuset, Kitty Willhelmsens gate 1, 6512 Kristia
 
 Før leieperioden er slutt skal leietaker også:
 
-- sette bord og stoler tilbake slik de sto (se oversikt over inventarplassering)
+- sette bord og stoler tilbake slik oppslaget i lokalet viser
 - tømme kjøleskap og fryser for egen mat og drikke
 - vaske opp og sette på plass servise, bestikk og kjøkkenutstyr
 - kaste søppel i riktige dunker og pante flasker selv
 - slå av komfyr, ovn, kaffetrakter og lys, lukke vinduer og låse alle dører
 
-Gulvvask og vask av toaletter er inkludert i leieprisen. Hvis lokalet ikke er ryddet som beskrevet, kan utleier trekke kostnadene fra depositumet.
+Gulvvask og vask av toaletter er inkludert i leieprisen. Hvis lokalet ikke er ryddet som beskrevet, kan utleier fakturere leietaker for ekstra opprydding.
 
 ## 5. Skader og ansvar
 
@@ -51,9 +50,11 @@ Gulvvask og vask av toaletter er inkludert i leieprisen. Hvis lokalet ikke er ry
 - Utleier er ikke ansvarlig for gjestenes eiendeler.
 - Utløsning av brannalarm som fører til utrykning uten at det brenner, belastes leietaker etter brannvesenets satser.
 
-## 6. Nøkkel
+## 6. Nøkkel og kontaktperson
 
-Nøkkel hentes og leveres etter avtale med utleier. Tapt nøkkel belastes med **MÅ FYLLES INN** kr.
+Gomahuset har digital nøkkel. Leietaker får tilgang for leieperioden etter at leien er betalt.
+
+Kontaktperson for IL Goma under leieperioden er **Per Erik Hoem, telefon 911 97 135**.
 
 ## 7. Signatur
 

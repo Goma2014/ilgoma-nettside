@@ -14,4 +14,4 @@ tittel: Personvern
 
 **Dine rettigheter:** Du kan be om innsyn, retting eller sletting av opplysninger om deg ved å kontakte oss på heia@ilgoma.no. Du kan også klage til Datatilsynet.
 
-Sist oppdatert: MÅ FYLLES INN (dato for publisering).
+Sist oppdatert: november 2026.

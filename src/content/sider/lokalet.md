@@ -4,31 +4,22 @@ tittel: Om lokalet, sikkerhet og inventar
 
 ## Lokalet
 
-- **Selskapssal:** bordplass til 50–60 gjester. Maks antall personer: **MÅ FYLLES INN**.
-- **Kjøkken:** komplett kjøkken med komfyr, stekeovn, kjøleskap og oppvaskmaskin (**MÅ FYLLES INN**: kontroller utstyrslisten). Servise og bestikk til **MÅ FYLLES INN** personer.
-- **Konferanserom** med presentasjonsutstyr (**MÅ FYLLES INN**: projektor eller skjerm, HDMI).
-- **Toaletter** i første etasje, nyoppusset i 2025. Tilgjengelig for rullestol: **MÅ FYLLES INN**.
-- **Parkering:** egne plasser ved inngangen (antall: **MÅ FYLLES INN**).
-- **Wifi:** **MÅ FYLLES INN** (nettverksnavn og passord står oppslått i lokalet).
+- **Selskapssal** med 15 bord og 45 stoler. Maks 60 personer i lokalet.
+- **Kjøkken:** komplett og fungerende kjøkken med servise og bestikk.
+- **Konferanserom** med presentasjonsutstyr.
+- **Toaletter** i første etasje, nyoppusset i 2025.
+- **Parkering:** egne plasser ved inngangen.
+- **Digital nøkkel:** du får tilgang fra fredag morgen til søndag kveld.
 
 ## Sikkerhet
 
-- **Nødutganger:** **MÅ FYLLES INN** (hvor de er, f.eks. hovedinngang og dør ut fra kjøkkenet). Nødutganger skal alltid være fri for bord, stoler og annet.
-- **Brannslukkere:** **MÅ FYLLES INN** (plassering, f.eks. ved inngangen og på kjøkkenet).
-- **Brannteppe:** **MÅ FYLLES INN** (f.eks. på kjøkkenet ved komfyren).
-- **Førstehjelpsskrin:** **MÅ FYLLES INN** (plassering).
-- **Hjertestarter:** **MÅ FYLLES INN** (nærmeste plassering).
-- **Møteplass ved brann:** **MÅ FYLLES INN** (f.eks. parkeringsplassen).
-- Ved brann: varsle alle, ring **110**, og slukk bare hvis det er trygt.
-- Ved ulykke eller skade: ring **113**. Politi: **112**.
-- Kontaktperson i IL Goma under leieperioden: **MÅ FYLLES INN** (navn og telefon).
+- **Evakueringsplanen** henger oppslått i lokalet. Den viser nødutganger, brannslukkere, brannteppe, førstehjelpsskrin og møteplass ved brann. Les den når dere kommer.
+- Nødutganger skal alltid være fri for bord, stoler og annet.
+- Det er ingen hjertestarter i Gomahuset.
+- **Ved brann:** varsle alle, ring **110**, gå til møteplassen som står på evakueringsplanen, og slukk bare hvis det er trygt.
+- **Ved ulykke eller skade:** ring **113**. Politi: **112**.
+- **Kontaktperson** for IL Goma under leieperioden: Per Erik Hoem, telefon 911 97 135.
 
 ## Plassering av inventar
 
-Bord og stoler skal stå slik når lokalet leveres tilbake:
-
-- **Bord:** antall **MÅ FYLLES INN**, plassering **MÅ FYLLES INN**.
-- **Stoler:** antall **MÅ FYLLES INN**, stables **MÅ FYLLES INN**.
-- **Kjøkkenutstyr og servise:** settes tilbake i skap som merket.
-
-En skisse eller et bilde av oppsettet kan lastes opp her: **MÅ FYLLES INN**.
+Lokalet har 15 bord og 45 stoler. Hvordan bordene skal stå når dere leverer lokalet, står på eget oppslag i lokalet. Kjøkkenutstyr og servise settes tilbake i skapene der de hører hjemme.

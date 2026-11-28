@@ -1,21 +1,21 @@
 {
   "ingress": "Gomahuset leies ut til selskap og sosiale samlinger. Nyoppusset og klart til fest, midt i Kristiansund.",
-  "kapasitet": "Bordplass til 50–60 gjester",
+  "kapasitet": "Bordplass til 45 gjester (15 bord og 45 stoler), og plass til maks 60 personer i lokalet",
   "fasiliteter": [
     "Komplett, fungerende kjøkken",
     "Konferanserom med presentasjonsutstyr",
     "Egne parkeringsplasser",
     "Nyoppussede toaletter og gang"
   ],
-  "tilgjengelighet": "Ved helgeleie disponerer du lokalet fra fredag til søndag kveld, så du har god tid til forberedelser og opprydding.",
+  "tilgjengelighet": "Ved helgeleie har du huset fra fredag morgen til søndag kveld, så du har god tid til forberedelser og opprydding.",
   "priser": [
     {
-      "navn": "Hel helg (fredag til søndag kveld), vask inkludert",
+      "navn": "Hel helg (fredag morgen til søndag kveld), vask inkludert",
       "pris": "6 000 kr"
     },
     {
       "navn": "Depositum",
-      "pris": "MÅ FYLLES INN"
+      "pris": "Ingen"
     }
   ],
   "betaling": "Vipps #550723",
