@@ -8,22 +8,64 @@
   "minidrett": "https://www.minidrett.no/",
   "organisasjonsnummer": "983389155",
   "adresser": [
-    { "navn": "Gomahuset og Gomabanen (utendørs trening)", "adresse": "Kitty Willhelmsens gate 1, 6512 Kristiansund" },
-    { "navn": "Innendørshall (oktober–april)", "adresse": "Nordmørsveien 71, Alti Futura (ved Crossfit)" },
-    { "navn": "Moseby 3D-løype", "adresse": "Ved Fredø skytterbane, Storbakken, Frei" }
+    {
+      "navn": "Gomahuset og Gomabanen (utendørs trening)",
+      "adresse": "Kitty Willhelmsens gate 1, 6512 Kristiansund"
+    },
+    {
+      "navn": "Innendørshall (oktober–april)",
+      "adresse": "Norodd-løpebanen, under tribunene på Atlanten Stadion"
+    },
+    {
+      "navn": "Moseby 3D-løype",
+      "adresse": "Ved Fredø skytterbane, Storbakken, Frei"
+    }
   ],
   "styre": [
-    { "navn": "Ivar JM Pedersen", "rolle": "Leder" },
-    { "navn": "Monica Betten", "rolle": "Nestleder" },
-    { "navn": "Sander Strand", "rolle": "Utstyr og anlegg" },
-    { "navn": "Herman Bersås", "rolle": "Administrasjon" },
-    { "navn": "Rune Stene", "rolle": "Stevneansvarlig" },
-    { "navn": "Per Erik Hoem", "rolle": "Økonomi" }
+    {
+      "navn": "Ivar JM Pedersen",
+      "rolle": "Leder"
+    },
+    {
+      "navn": "Monica Betten",
+      "rolle": "Nestleder"
+    },
+    {
+      "navn": "Sander Strand",
+      "rolle": "Utstyr og anlegg"
+    },
+    {
+      "navn": "Herman Bersås",
+      "rolle": "Administrasjon"
+    },
+    {
+      "navn": "Rune Stene",
+      "rolle": "Stevneansvarlig"
+    },
+    {
+      "navn": "Per Erik Hoem",
+      "rolle": "Økonomi"
+    }
   ],
   "trenere": [
-    { "navn": "Monica Betten", "rolle": "Trener 2 NIF, World Archery Coach nivå 2, Trenerutvalget NBF, sertifisert yogainstruktør" },
-    { "navn": "Ivar JM Pedersen", "rolle": "Trener 2 NIF" },
-    { "navn": "Rune Stene", "rolle": "Trener 1 NIF" }
+    {
+      "navn": "Monica Betten",
+      "rolle": "Trener 2 NIF, World Archery Coach nivå 2, Trenerutvalget NBF, sertifisert yogainstruktør"
+    },
+    {
+      "navn": "Ivar JM Pedersen",
+      "rolle": "Trener 2 NIF"
+    },
+    {
+      "navn": "Rune Stene",
+      "rolle": "Trener 1 NIF"
+    }
   ],
-  "aktivitetsledere": ["Maria Meisal Pedersen", "Sander Orset", "Simen Mahle", "Arne Vist", "Herman Bersaas"]
+  "aktivitetsledere": [
+    "Maria Meisal Pedersen",
+    "Sander Orset",
+    "Simen Mahle",
+    "Arne Vist",
+    "Herman Bersaas"
+  ]
 }

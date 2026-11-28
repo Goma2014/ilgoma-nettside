@@ -2,12 +2,20 @@
 tittel: Aktivitetsrapport 2026
 dato: 2026-11-28
 bilde: /bilder/2026-sankthans.jpg
-ingress: Nyttårsbord, NM innendørs og NM 3D, en full stevnesommer, Sprudle familiefest med 1 000 besøkende og flytting inn i ny treningshall. Her er 2026 i IL Goma så langt.
+ingress: Nyttårsbord, NM innendørs og NM 3D, dommere i to NM, en full stevnesommer, Sprudle familiefest med 1 000 besøkende, en seniorgjeng som har pusset opp klubbhuset og ny treningshall på Atlanten Stadion. Her er 2026 i IL Goma så langt.
 ---
 
 ## Trening hele året
 
-Bueskytterne har hatt to faste treninger i uka gjennom hele året. Vintersesongen startet i januar med et gjennomgående teknikkprogram der vi tok for oss én del av skyteteknikken om gangen: kroppsposisjon, hodeposisjon, buearm, strengarm, ankring og slipp. I mars handlet treningene om scoring, tidspress og shoot-offs fram mot NM. Den 30. april flyttet vi ut på Gomabanen og i Moseby-løypa for sommersesongen, og i oktober flyttet vi inn i ny innendørshall.
+Bueskytterne har hatt to faste treninger i uka gjennom hele året. Vintersesongen startet i januar med et gjennomgående teknikkprogram der vi tok for oss én del av skyteteknikken om gangen: kroppsposisjon, hodeposisjon, buearm, strengarm, ankring og slipp. I mars handlet treningene om scoring, tidspress og shoot-offs fram mot NM. Den 30. april flyttet vi ut på Gomabanen og i Moseby-løypa for sommersesongen, og i oktober flyttet vi inn i ny innendørshall på Norodd-løpebanen under tribunene på Atlanten Stadion.
+
+## Seniorgjengen
+
+En egen takk går til seniorgjengen, en fantastisk gjeng som fortjener ekstra oppmerksomhet. De har samlinger én gang i måneden med matservering og aktiviteter, og jevnlige dugnadsøkter. Gjennom dugnadene har de så å si pusset opp hele klubbhuset.
+
+## Representert i Idrettsrådet
+
+I 2026 er IL Goma representert i Idrettsrådet i Kristiansund ved Maria Pedersen.
 
 ## Nyttårsbord (januar)
 
@@ -41,10 +49,6 @@ IL Goma gikk som vanlig i borgertoget.
 
 Vi deltok på Vårpila.
 
-## Sommerskole (1. juni)
-
-Vi deltok i sommerskolen.
-
 ## 3D-stevne i Ålesund (7. juni)
 
 Vi deltok på 3D-stevne i Ålesund.
@@ -67,9 +71,13 @@ Sommersesongen ble avsluttet med Grillpila i skogen, med bueskyting og grilling.
 
 Også i år dro vi til Kobberpila på Røros.
 
-## NM 3D på Yrjar (12. september)
+## NM 3D på Brekstad (12. september)
 
-Etter å ha arrangert NM i 3D i Moseby både i 2024 og 2025, stilte klubben i år som deltaker da NM 3D ble arrangert på Yrjar.
+Etter å ha arrangert NM i 3D i Moseby både i 2024 og 2025, deltok vi i år med 5 skyttere da NM 3D ble arrangert på Brekstad.
+
+## Dommere i NM
+
+Klubben bidro med dommere både i NM 3D og i NM skive i sommer. Det er et viktig bidrag til bueskytingen i Norge, og viser at klubben har bygget opp kompetanse også utenfor skytelinjen.
 
 ## Sprudle familiefest i Folkeparken (13. september)
 
@@ -77,7 +85,7 @@ Vi deltok med bueskyting på Sprudle familiefest i Folkeparken, som hadde rundt 
 
 ## Ny treningshall (oktober)
 
-12. oktober flyttet vi inn i ny innendørshall, der vintertreningene nå holdes mandager og onsdager.
+12. oktober flyttet vi inn i ny innendørshall på Norodd-løpebanen under tribunene på Atlanten Stadion. Her holdes vintertreningene mandager og onsdager.
 
 ## Stevne på Vigra (15. november)
 
