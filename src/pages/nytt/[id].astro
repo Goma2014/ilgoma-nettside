@@ -12,7 +12,7 @@ const dato = n.data.dato.toLocaleDateString('nb-NO', { day: 'numeric', month: 'l
 <Base tittel={n.data.tittel} beskrivelse={n.data.ingress}>
   <article class="seksjon">
     <div class="wrap prose">
-      <p><a href="/nytt">← Alle nyheter</a></p>
+      <p><a href="/nytt">← Alle nyheter</a>{n.data.tittel.startsWith('Aktivitetsrapport') && <> · <a href={`/rapport/${n.id}`}>Vis som trykkvennlig rapport</a></>}</p>
       <small>{dato}</small>
       <h1>{n.data.tittel}</h1>
       {n.data.ingress && <p class="ingress">{n.data.ingress}</p>}

@@ -22,12 +22,12 @@ const sti = Astro.url.pathname.replace(/\/$/, '');
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{fullTittel}</title>
   <meta name="description" content={beskrivelse} />
-  <link rel="icon" href="/bilder/logo.png" />
+  <link rel="icon" href="/bilder/logo-farger.png" />
 </head>
 <body>
   <header class="topp">
     <div class="wrap topp-indre">
-      <a href="/" class="logo"><img src="/bilder/logo.png" alt="" width="44" height="44" /><span>IL Goma</span></a>
+      <a href="/" class="logo"><img src="/bilder/logo-farger.png" alt="" width="44" height="44" /><span>IL Goma</span></a>
       <details class="mobilmeny">
         <summary aria-label="Meny">Meny</summary>
         <nav>{meny.map((m) => <a href={m.href} aria-current={sti.startsWith(m.href) ? 'page' : undefined}>{m.tekst}</a>)}</nav>

@@ -3,6 +3,11 @@ tittel: Aktivitetsrapport 2026
 dato: 2026-11-28
 bilde: /bilder/2026-nm3d-gull-hedda.jpg
 ingress: To NM-gull i 3D, pallplass på Kobberpila, dommere i to NM, en full stevnesommer, Sprudle familiefest med 1 000 besøkende, baklukeloppis, julegrantenning, en seniorgjeng som har pusset opp klubbhuset og ny treningshall på Atlanten Stadion. Her er 2026 i IL Goma så langt.
+nokkeltall:
+  - { tall: "2", tekst: "NM-gull i 3D" }
+  - { tall: "9", tekst: "stevner med Goma-skyttere" }
+  - { tall: "1 000", tekst: "besøkende på Sprudle" }
+  - { tall: "2", tekst: "faste treninger i uka" }
 ---
 
 ## Trening hele året
@@ -130,7 +135,7 @@ Vi deltok på åpen dag på den nye brannstasjonen, nabo til Gomahuset, og drev 
 
 ## Ny treningshall (oktober)
 
-12. oktober flyttet vi inn i ny innendørshall på Norodd-løpebanen under tribunene på Atlanten Stadion. Her holdes vintertreningene mandager og onsdager. Den nye hallen gir oss svært gode fasiliteter i et ekte idrettsmiljø, og ikke minst oppvarmede lokaler hele vinteren. Medlemmene la ned flere dugnadsøkter for å gjøre hallen klar.
+Den 12. oktober flyttet vi inn i ny innendørshall på Norodd-løpebanen under tribunene på Atlanten Stadion. Her holdes vintertreningene mandager og onsdager. Den nye hallen gir oss svært gode fasiliteter i et ekte idrettsmiljø, og ikke minst oppvarmede lokaler hele vinteren. Medlemmene la ned flere dugnadsøkter for å gjøre hallen klar.
 
 ![Dugnad i den nye hallen](/bilder/2026-dugnad-hall-1.jpg)
 

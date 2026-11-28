@@ -1,0 +1,160 @@
+---
+// Utskriftsvennlig, designet rapportversjon av en nyhet (brukes til PDF, f.eks. til sponsorer og bank).
+import { getCollection } from 'astro:content';
+import klubb from '../../data/klubb.json';
+import s from '../../data/sponsorer.json';
+
+export async function getStaticPaths() {
+  const alle = await getCollection('nyheter');
+  return alle.map((n) => ({ params: { id: n.id }, props: { n } }));
+}
+const { n } = Astro.props;
+const år = n.data.dato.getFullYear();
+
+// Grupper bilder som står etter hverandre, og gjør bildeteksten (alt) synlig.
+let html = n.rendered?.html ?? '';
+html = html.replace(/<p>(<img [^>]*>)<\/p>/g, (_m, img) => {
+  const alt = (img.match(/alt="([^"]*)"/) || [])[1] || '';
+  return `<figure>${img}${alt ? `<figcaption>${alt}</figcaption>` : ''}</figure>`;
+});
+html = html.replace(/<p><em>Foto: ([^<]*)<\/em><\/p>/g, '<p class="kreditt">Foto: $1</p>');
+html = html.replace(/(<figure>[\s\S]*?<\/figure>\s*){2,}/g, (m) => `<div class="bildegruppe">${m}</div>`);
+// Del inn i seksjoner per h2, så hver aktivitet holdes samlet.
+const deler = html.split(/(?=<h2)/).filter((d) => d.trim());
+
+const forsidebilder = ['/bilder/2026-nm3d-gull-hedda.jpg', '/bilder/2026-kobberpila-simen.jpg', '/bilder/2026-nm3d-gull-marthe.jpg'];
+const sponsorer = [s.hovedsponsor, ...s.sponsorer].filter((x) => x.logo);
+const datoTekst = n.data.dato.toLocaleDateString('nb-NO', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{n.data.tittel} – IL Goma</title>
+  <link rel="icon" href="/bilder/logo-farger.png" />
+</head>
+<body>
+  <section class="forside">
+    <div class="forside-topp">
+      <img class="logo" src="/bilder/logo-farger.png" alt="IL Goma" />
+      <div class="avsender">Idrettslaget Goma<br />Kristiansund · Stiftet {klubb.stiftet}</div>
+    </div>
+    <div class="forside-tittel">
+      <p class="overtittel">Aktivitetsrapport</p>
+      <h1>{år}</h1>
+      <p class="slagord">{klubb.slagord}</p>
+    </div>
+    <div class="forside-bilder">
+      {forsidebilder.map((b) => <div class="ramme"><img src={b} alt="" /></div>)}
+    </div>
+    <div class="forside-bunn">
+      <span>{datoTekst}</span>
+      <span>www.ilgoma.no</span>
+    </div>
+  </section>
+
+  <section class="side intro">
+    <p class="ingress">{n.data.ingress}</p>
+    {n.data.nokkeltall && (
+      <div class="nokkeltall">
+        {n.data.nokkeltall.map((k) => <div class="tall"><strong>{k.tall}</strong><span>{k.tekst}</span></div>)}
+      </div>
+    )}
+  </section>
+
+  <main class="innhold">
+    {deler.map((d) => <section class="aktivitet" set:html={d} />)}
+  </main>
+
+  <section class="takk">
+    <img class="logo-liten" src="/bilder/logo-farger.png" alt="" />
+    <h2>Takk til våre samarbeidspartnere</h2>
+    <p>Uten god støtte fra lokalt næringsliv hadde vi ikke klart å skape så mye aktivitet for barn, unge og voksne i Kristiansund. Tusen takk!</p>
+    <div class="logoer">{sponsorer.map((sp) => <div><img src={sp.logo} alt={sp.navn} /></div>)}</div>
+    <p class="kontakt">IL Goma · {klubb.epost} · {klubb.telefon} · Org.nr. {klubb.organisasjonsnummer} · www.ilgoma.no</p>
+  </section>
+</body>
+</html>
+
+<style is:global>
+  @font-face { font-family: 'Inter'; src: url('/fonter/Inter-Regular.otf'); font-weight: 400; }
+  @font-face { font-family: 'Inter'; src: url('/fonter/Inter-Italic.otf'); font-weight: 400; font-style: italic; }
+  @font-face { font-family: 'Inter'; src: url('/fonter/Inter-SemiBold.otf'); font-weight: 600; }
+  @font-face { font-family: 'Inter Display'; src: url('/fonter/InterDisplay-Light.otf'); font-weight: 300; }
+  @font-face { font-family: 'Inter Display'; src: url('/fonter/InterDisplay-Bold.otf'); font-weight: 700; }
+  @font-face { font-family: 'Inter Display'; src: url('/fonter/InterDisplay-Black.otf'); font-weight: 900; }
+
+  :root { --blå: #1c3156; --blå-dyp: #13233f; --gul: #f1bb14; --tekst: #2a2f3a; --lys: #f6f4ee; }
+  @page { size: A4; margin: 14mm 0 16mm;
+    @bottom-left { content: 'IL Goma · Aktivitetsrapport'; font-family: 'Inter', sans-serif; font-size: 7.5pt; color: #8a8f9c; padding-left: 20mm; }
+    @bottom-right { content: counter(page); font-family: 'Inter', sans-serif; font-size: 7.5pt; color: #1c3156; padding-right: 20mm; }
+  }
+  @page forside { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
+  @page takk { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; font-family: 'Inter', system-ui, sans-serif; color: var(--tekst); font-size: 10.5pt; line-height: 1.55; background: #e9e9e9; }
+  img { display: block; max-width: 100%; }
+
+  /* Forside */
+  .forside { page: forside; width: 210mm; height: 297mm; margin: 0 auto; background: var(--blå); color: #fff; position: relative; overflow: hidden; padding: 18mm 18mm 14mm; display: flex; flex-direction: column; break-after: page; }
+  .forside::before { content: ''; position: absolute; right: -60mm; top: -40mm; width: 170mm; height: 170mm; border-radius: 50%; border: 18mm solid rgba(241,187,20,.08); }
+  .forside-topp { display: flex; align-items: center; gap: 6mm; position: relative; }
+  .forside .logo { width: 30mm; }
+  .avsender { font-size: 9.5pt; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.75); line-height: 1.6; border-left: 1px solid var(--gul); padding-left: 5mm; }
+  .forside-tittel { margin-top: 26mm; position: relative; }
+  .overtittel { font-family: 'Inter Display'; font-weight: 300; font-size: 26pt; letter-spacing: .02em; margin: 0; color: #fff; }
+  .forside h1 { font-family: 'Inter Display'; font-weight: 900; font-size: 110pt; line-height: .9; margin: 0; color: var(--gul); letter-spacing: -.02em; }
+  .slagord { font-style: italic; color: rgba(255,255,255,.8); margin: 5mm 0 0; font-size: 11pt; }
+  .forside-bilder { display: grid; grid-template-columns: 1fr 1.25fr 1fr; gap: 4mm; margin-top: auto; align-items: end; }
+  .ramme { border: 1.2mm solid #fff; background: #fff; box-shadow: 0 3mm 8mm rgba(0,0,0,.35); }
+  .ramme img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center 30%; }
+  .forside-bilder .ramme:nth-child(2) img { aspect-ratio: 4/5; }
+  .forside-bilder .ramme:nth-child(1) { transform: rotate(-2deg); }
+  .forside-bilder .ramme:nth-child(3) { transform: rotate(2deg); }
+  .forside-bunn { display: flex; justify-content: space-between; margin-top: 10mm; padding-top: 4mm; border-top: 1px solid rgba(241,187,20,.5); font-size: 9pt; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.7); }
+
+  /* Innholdssider */
+  .intro, .innhold, .takk { width: 210mm; margin: 0 auto; background: #fff; padding: 0 20mm; }
+  .intro { padding-top: 8mm; padding-bottom: 6mm; }
+  .ingress { font-family: 'Inter Display'; font-weight: 300; font-size: 16pt; line-height: 1.4; color: var(--blå); margin: 0 0 9mm; border-left: 1.5mm solid var(--gul); padding-left: 6mm; }
+  .nokkeltall { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; }
+  .tall { background: var(--blå); color: #fff; padding: 5mm 4mm; border-radius: 2mm; }
+  .tall strong { display: block; font-family: 'Inter Display'; font-weight: 900; font-size: 26pt; color: var(--gul); line-height: 1; }
+  .tall span { font-size: 8.5pt; text-transform: uppercase; letter-spacing: .05em; color: rgba(255,255,255,.85); }
+
+  .innhold { padding-top: 4mm; padding-bottom: 12mm; }
+  .aktivitet { display: flow-root; break-inside: avoid; padding: 5mm 0 3mm; border-bottom: 1px solid #ece7d8; }
+  .aktivitet:last-child { border-bottom: 0; }
+  .aktivitet h2 { break-after: avoid; font-family: 'Inter Display'; font-weight: 700; font-size: 15pt; color: var(--blå); margin: 0 0 2mm; display: flex; align-items: center; gap: 3mm; }
+  .aktivitet h2::before { content: ''; width: 6mm; height: 1.2mm; background: var(--gul); flex: none; }
+  .aktivitet p { margin: 0 0 2.5mm; }
+  .aktivitet strong { color: var(--blå); }
+  figure { margin: 1mm 0 3mm; break-inside: avoid; }
+  figure img { width: 100%; object-fit: cover; object-position: center 25%; border-radius: 1.5mm; }
+  .aktivitet > figure { float: right; width: 44%; margin: 1mm 0 3mm 6mm; }
+  .aktivitet > figure img { height: 58mm; }
+  figcaption { font-size: 8.5pt; color: #6b7080; margin-top: 1.5mm; font-style: italic; }
+  .bildegruppe { clear: both; display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 3mm; break-inside: avoid; }
+  .bildegruppe figure img { height: 64mm; }
+  .kreditt { font-size: 8pt; color: #8a8f9c; margin-top: -1mm !important; }
+  blockquote { margin: 3mm 0; padding: 3mm 5mm; background: var(--lys); border-left: 1.2mm solid var(--gul); font-style: italic; }
+
+  .takk { page: takk; padding-top: 16mm; padding-bottom: 16mm; text-align: center; break-before: page; min-height: 297mm; display: flex; flex-direction: column; align-items: center; background: var(--lys); }
+  .logo-liten { width: 22mm; margin-bottom: 6mm; }
+  .takk h2 { font-family: 'Inter Display'; font-weight: 700; color: var(--blå); font-size: 20pt; margin: 0 0 3mm; }
+  .takk > p { max-width: 130mm; }
+  .logoer { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; width: 100%; margin: 8mm 0; }
+  .logoer div { background: #fff; border-radius: 2mm; height: 24mm; display: flex; align-items: center; justify-content: center; padding: 3mm; }
+  .logoer img { max-height: 18mm; object-fit: contain; }
+  .kontakt { margin-top: auto; font-size: 8.5pt; color: #6b7080; letter-spacing: .03em; }
+
+  @media screen {
+    body { padding: 8mm 0; }
+    .forside, .intro, .innhold, .takk { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+    .forside { margin-bottom: 8mm; }
+    .takk { margin-top: 8mm; }
+  }
+  @media print { body { background: #fff; } }
+</style>
