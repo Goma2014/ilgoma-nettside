@@ -46,3 +46,11 @@ form.skjema .avkryss { display: flex; gap: .5rem; align-items: flex-start; font-
 @media (min-width: 800px) { .to-kol { grid-template-columns: 1fr 1fr; } }
 .undermeny { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
 .undermeny a { display: inline-block; padding: .35rem .8rem; border-radius: 99px; background: var(--grå); text-decoration: none; font-size: .95rem; }
+@media print {
+  @page { size: A4; margin: 15mm; }
+  .topp, .bunn { display: none !important; }
+  .seksjon { padding: 0; }
+  .prose { max-width: none; }
+  .prose img { max-height: 8cm; width: auto; break-inside: avoid; }
+  h2 { break-after: avoid; margin-top: 1.4rem; }
+}
